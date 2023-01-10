@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>My Website</title>
+</head>
+<body>
+	<!-- Script tag at the start of body tag -->
+	<script>
+		function myFunction() {
+			document.getElementById("p1").innerHTML = "The paragraph has been changed";
+		}
+	</script>
+	<h1>My Website</h1>
+	<p id="p1">This is a paragraph.</p1>
+	<button type="button" onclick="myFunction()">Try it</button>
+</body>
+</html>
