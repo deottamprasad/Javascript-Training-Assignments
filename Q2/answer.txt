@@ -1,0 +1,5 @@
+- When we attach the script in the head tag, the browser won't be able to find any element whose id matches with the given id as the element itself doesn't exist when the browser will be executing the script.So, it will just show Hello World! in the screen.
+
+- When we attach the script at the start of the body tag, again the browser won't find the element because the element doesn't exist when the browser will be executing the script. So, it will just show Hello World! in the screen.
+
+- When the script is attached at the end of the body tag, then the browser finds the h1 element by using the given id and changes its content to "Goodbye World". So, ultimately, it will show Goodbye World in the screen.
