@@ -1,0 +1,15 @@
+//What's the reason const variable allows us to edit the values inside array or objects?
+
+//The const declaration creates a read-only reference to a value. It does not mean the value it holds is //immutable—just that the variable identifier cannot be reassigned. For instance, in the case where the content //is an object, this means the object's contents (e.g., its properties) can be altered.
+//So, even though we are allowed to alter the values inside array and objects, we cant re-assign a different //array or object in the const variable.
+
+
+//Difference between let and const
+
+//First difference
+//We can declare let variables without initializing any values.
+//We can't declare const variables without initializing it.
+
+//Second difference
+//We are allowed to re-assign values in let variables.
+//But we can't re-assign values in const variables.

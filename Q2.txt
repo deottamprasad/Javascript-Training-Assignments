@@ -1,0 +1,46 @@
+//Using typeof operator to check types of different variables
+
+let integerVar = 10;
+let stringVar = "Hello World";
+let arrayVar = [10, 20, 30, 40, 50];
+let objectVar = {
+  name: "Deottam",
+    age: 23,
+};
+
+let nanVar = NaN;
+let nullVar = null;
+let undefinedVar = undefined;
+
+console.log(typeof(integerVar));
+// Output: number
+
+console.log(typeof(stringVar));
+// Output: string
+
+console.log(typeof(arrayVar));
+// Output: object
+
+console.log(typeof(objectVar));
+// Output: object
+
+console.log(typeof(nullVar));
+// Output: object
+
+console.log(typeof(nanVar));
+// Output: number
+
+console.log(typeof(undefinedVar));
+// Output: undefined
+
+
+
+//We can use Array.isArray function to check if the given variable is array or not.
+console.log(Array.isArray(arrayVar));
+// Output: true
+
+
+//We can use isNan function to check if the given variable is NaN or not.
+console.log(isNaN(nanVar));
+// Output: true
+
