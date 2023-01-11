@@ -1,0 +1,62 @@
+//Creating  arrays and objects using let
+
+let array_let = [10, 20, 30, 40, 50];
+let object_let = {
+  name: "Deottam",
+    age: 23,
+};
+
+//Creating  arrays and objects using let
+
+const array_const = [10, 17, 28, 32, 11];
+const object_const = {
+  name: "Prasad",
+    age: 24,
+};
+
+//Modifying Properties of array and objects
+
+array_let[3] = 50;
+array_const[3] = 50;
+
+console.log(array_let);
+// Output: [ 10, 20, 30, 50, 50 ]
+console.log(array_const);
+// Output: [ 10, 17, 28, 50, 11 ]
+
+object_let.name = "John";
+object_const.name = "Cena";
+
+console.log(object_let);
+// Output: {name: 'John', age: 23}
+console.log(object_const);
+// Output: {name: 'Cena', age: 24}
+
+//Deleting Properties of array and objects
+
+array_let.splice(3, 3);
+array_const.splice(3, 3);
+
+console.log(array_let);
+// Output: [10, 20, 30]
+console.log(array_const);
+// Output: [10, 17, 28]
+
+delete object_let.name;
+delete object_const.name;
+
+console.log(object_let);
+// Output: {age: 23}
+console.log(object_const);
+// Output: {age: 24}
+
+//Expectation
+//I expected const variables will not allow us to modify or delete the values because they should be constant throughout the program.
+
+//Reality
+//We are allowed to modify or delete the values even of const variables.
+
+//Difference between an object declared as a let or a const variable
+
+//We can declare let variables without initializing any values.
+//We can't declare const variables without initializing it.

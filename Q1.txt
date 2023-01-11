@@ -1,0 +1,26 @@
+// When declaring a variable using let
+
+let a;
+
+console.log(a);
+// Output: undefined
+
+a = 10;
+
+console.log(a);
+// Output: 10
+
+//When declaring a variable using const
+//We can't just declare a const variable without initializing any value
+const x = 10;
+
+
+console.log(x);
+// Output: 10
+
+x = 20;
+//Uncaught TypeError: Assignment to constant variable.
+//It means we cant assign any other value to a const variable
+
+console.log(x);
+// Output: 10
