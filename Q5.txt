@@ -1,0 +1,44 @@
+//Question 5
+
+//Yes, we can use return instead of break in loop but only when there is no instructions after the return statement in the function. Otherwise, those instructions will be skipped and control comes out of the function before executing the remaining instructions at the end of function. 
+
+//When using break statement inside a loop
+
+function myFunc() {
+    for(let i=0;i<=5;i++) {
+        console.log(i);
+        if(i>=3) {
+            return;
+        }
+    }
+    console.log("Finished loop");
+}
+
+myFunc();
+
+//Output :   0
+//          1
+//          2
+//          3
+//          Finished loop
+//As we can see, the for loop prints numbers from 0 to 3 and when i becomes 3 if statement gets executed and the break statement makes the control come out of the for loop and then Finished loop is printed in the console.
+
+//When using return statement inside a loop
+
+function myFunc() {
+    for(let i=0;i<=5;i++) {
+        console.log(i);
+        if(i>=3) {
+            return;
+        }
+    }
+    console.log("Finished loop"); 
+}
+
+myFunc();
+
+//Output :  0
+//          1
+//          2
+//          3
+//As we can see, the for loop prints numbers from 0 to 3 and when i becomes 3 if statement gets executed and the return statement makes the control out of the function //and so Finished loop is not printed in the console.
