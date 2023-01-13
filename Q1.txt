@@ -1,0 +1,17 @@
+//Question 1 : Difference between ++i and i++
+
+// The operators ++ and -- can be placed either before or after a variable.
+// When the operator goes after the variable, it is in “postfix form”: i++.
+// The “prefix form” is when the operator goes before the variable: ++i.
+
+let i = 1;
+let a = ++i; // 
+alert(a); // 2
+
+//In the above code, the prefix form ++i increments i and returns the new value, 2. So, the alert shows 2.
+
+let i = 1;
+let a = i++; //  changed ++i to i++
+
+alert(a); // 1
+//In the above code, the postfix form i++ also increments i but returns the old value (prior to increment). So, the alert shows 1.

@@ -1,0 +1,32 @@
+//Question 3
+
+let arr = [12,"Hello",3.43,true];
+let strArr = JSON.stringify(arr);
+console.log(typeof(arr)); //object
+console.log(typeof(strArr)); //string
+//So, JSON.stringify works with arrays 
+
+let nestedObj = {
+    name : 'Deottam',
+    age : 23,
+    address : {
+        state : 'Jharkhand',
+        country : 'India',
+    }
+}
+let strNestedObj = JSON.stringify(nestedObj);
+console.log(typeof(nestedObj));  //object
+console.log(typeof(strNestedObj));  //string
+//JSON.stringify also works with nested objects.
+
+let numVar = 12;
+let strVar = "Welcome";
+let undefinedVar = undefined;
+let nullVar = null;
+
+console.log(typeof(JSON.stringify(numVar))); //string
+console.log(typeof(JSON.stringify(strVar))); //string
+console.log(typeof(JSON.stringify(undefinedVar))); //undefined
+console.log(typeof(JSON.stringify(nullVar))); //string
+
+//JSON.stringify works with numbers, strings, and null values but it doesn't work with undefined values, it just returns undefined.

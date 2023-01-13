@@ -1,0 +1,10 @@
+//Question 4
+
+let invalidStr = "Welcome";
+let jsonObj = JSON.parse(invalidStr);
+// Output : SyntaxError: Unexpected token 'W', "Welcome" is not valid JSON
+
+console.log("Welcome");
+
+//As we can see, JSON.parse used in an invalid or regular string produces syntax error.
+//The syntax error stops the program execution at that point. And the rest of the code never gets executed after the syntax error.

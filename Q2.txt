@@ -1,0 +1,14 @@
+//Quesion 2 
+
+let str = "Welcome";
+
+console.log(str[10]);
+//Output : undefined
+
+console.log(str[-1]);
+//Output : undefined
+
+console.log(str);
+//Output : Welcome
+
+//So, when we pass the index beyond the range of the string it gives undefined value.
