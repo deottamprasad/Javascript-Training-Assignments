@@ -1,0 +1,88 @@
+//Question 1
+
+//Using return instead of break inside loop in the function
+
+function func1() {
+    for(let i=0;i<5;i++) {
+        if(i==3)
+            return;
+        else
+            console.log(i);
+    }
+    console.log("Finished loop");
+}
+
+func1();
+//Output : 0
+//         1
+//         2
+
+function func2() {
+    let i=0;
+    while(i<5) {
+        if(i==3)
+            return;
+        else
+            console.log(i);
+        i++;
+    }
+    console.log("Finished loop");
+}
+
+func2();
+//Output : 0
+//         1
+//         2
+
+function func3() {
+    let x = 3;
+    switch(x) {
+        case 1: console.log("One");
+            return;
+        case 2: console.log("Two");
+            return;
+        case 3: console.log("Three");
+            return;
+        case 4: console.log("Four");
+            return;
+        case 5: console.log("Five");
+            return;
+    }
+    console.log("Finished switch");
+}
+
+func3();
+//Output : Three
+
+//When we use return instead of break statement, the control immediately comes out of the function after executing return statement.
+//As we can see, the Finished loop/switch never run as the control didn't get the chance to run it at all. So, statements after the loop don't run.
+
+let f1 = func1();
+console.log(f1);
+//Output : undefined
+
+let f2 = func2();
+console.log(f2);
+//Output : undefined
+
+let f3 = func3();
+console.log(f3);
+//Output : undefined
+
+//So, in all the three cases, the return value is undefined.
+
+function func4() {
+    for(let i=0;i<5;i++) {
+        if(i==3)
+            return "Returned succesfully";
+        else
+            console.log(i);
+    }
+    console.log("Finished loop");
+}
+let f4 = func4();
+console.log(f4);
+//Ouput : Returned succesfully
+//So YES ,we can pass a return value from within a loop as i have returned a string in func4.
+//Also, we can use return inside an if block as we can see in func4.
+//Using return inside if block immediately makes the control come out of the loop when control enters if block and executes return statement.

@@ -1,0 +1,60 @@
+//Question 2
+
+function test(callback) {
+    callback();
+}
+
+function callbackFunc() {
+    console.log("Calling the callback function");
+    return 5;
+}
+
+let a = test(callbackFunc);
+//Output : Calling the callback function
+console.log(a);
+//Output : undefined
+//In the above case, we simply pass callbackFunc as callback function to test so it executes the body of callbackFunc and prints inside console but since test function doesnt return anything so undefined is returned.
+//Note although callbackFunc is returning 5 but that value is wasted.
+
+let b = test(callbackFunc());
+// Output :  Calling the callback function
+	     TypeError: callback is not a function
+//It is because callbackFunc is returning 5 which is passed as an argument inside test function and that argument is not a function so giving type error.
+console.log(b);
+//Since the above code test(callbackFunc()) gives type error, so nothing is returned inside b.
+
+let c = test(()=>callbackFunc());
+//Ouput : Calling the callback function
+console.log(c);
+//Output : undefined
+//In above case, arrow function makes a new function which calls callbackFunc inside it which is passed as a callback function to test so when this new function is called inside test the body of callbackFunc gets executed and returns 5 which gets wasted and finally test function returns nothing so undefined is printed in console.
+
+function test(callback) {
+    return callback();
+}
+
+function callbackFunc() {
+    console.log("Calling the callback function");
+    return 5;
+}
+
+console.log(test(callbackFunc));
+//Ouput : Calling the callback function
+//        5
+//It returns 5 because the callbackFunc returns 5 which is then returned by test function.
+
+function test(callback) {
+    return callback;
+}
+
+function callbackFunc() {
+    console.log("Calling the callback function");
+    return 5;
+}
+
+console.log(test(callbackFunc));
+//Ouput : ƒ callbackFunc() {
+//    console.log("Calling the callback function");
+//    return 5;
+//}
+//The callbackFunc is returned by test function which is printed in the console but callbackFunc is never called.
