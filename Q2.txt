@@ -1,0 +1,100 @@
+Difference between mutating and not-mutating methods
+
+Those methods which changes the original array in place are called Mutating methods whereas those methods which doesn't changes the original array instead it returns a new array are called Non-mutating methods.
+
+Examples of mutating methods are :-
+array.push(), array.unshift(), array.pop(), array.shift(), array.splice(), array.sort()
+
+Examples of non-mutating methods are :-
+array.concat(), array.filter(), array.slice(), array.map(), array.find()
+
+We can verify each of the methods whether they are mutating or not by checking the contents of original array if it has been modified or not.
+
+Q2.a) array.push()
+
+let arr = [10,20,40,50,30];
+let newArr = arr.push(60);
+
+console.log(arr);
+//Output :
+//[10, 20, 40, 50, 30, 60]
+
+console.log(newArr);
+//Output :
+//6
+//So, we can see it modified the original array and returned length of new array so array.push() is mutating method.
+
+Q2.b) array.pop()
+
+let arr = [10,20,40,50,30];
+let newArr = arr.pop();
+
+console.log(arr);
+//Output :
+//[10, 20, 40, 50]
+
+console.log(newArr);
+//Output :
+//30
+//So, we can see it modified the original array and returned the popped element from the array so array.pop() is mutating method.
+
+Q2.c) array.filter()
+
+let arr = [10,20,40,50,30];
+let newArr = arr.filter((item) => item>20);
+
+console.log(arr);
+//Output :
+//[10, 20, 40, 50, 30]
+
+console.log(newArr);
+//Output :
+//[40, 50, 30]
+//So, as we can see it doesn't modify the original array instead it returned a new array which contains only the filtered elements so array.filter() is a non-mutating method.
+
+Q2.d) array.find()
+
+let arr = [10,20,40,50,30];
+let newArr = arr.find((item)=>item==50);
+
+console.log(arr);
+//Output :
+//[10, 20, 40, 50, 30]
+
+console.log(newArr);
+//Output :
+//50
+//So, we can see it doesn't modify the original array instead it returned the first element which matches the specified condition in the function so array.find() is non-mutating method.
+
+Q2.e) array.sort()
+
+let arr = [10,20,40,50,30];
+let newArr = arr.sort((a,b) => a-b);
+
+console.log(arr);
+//Output :
+//[10, 20, 30, 40, 50]
+
+console.log(newArr);
+//Output :
+//[10, 20, 30, 40, 50]
+//So, we can see we got the sorted array in both cases, it is because sort() method sorts the original array inplace and also returns the new sorted array, so array.sort() is a mutating method.
+
+Q2.f) array.map()
+
+let arr = [10,20,40,50,30];
+let newArr = arr.map((item) => {
+    return item / 10;
+});
+
+console.log(arr);
+//Output :
+//[10, 20, 40, 50, 30]
+
+console.log(newArr);
+//Output :
+//[1, 2, 4, 5, 3]
+//So, we can see the original array is not modified instead it returned a new array which is transformed from the original array so array.map() is a non-mutating method.
+
+
+
