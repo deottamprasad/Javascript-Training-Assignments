@@ -1,0 +1,21 @@
+let obj = {
+ name:"Harry Potter",
+ age: 12,
+ address: {
+  details: ["4","Privet Drive"],
+  area:"Little Whinging",
+  city: "Surrey",
+  state: "England"
+ } 
+}
+let clone = structuredClone(Object.assign({},obj,{address:{details:["5","Privet Drive"]}}));
+console.log(obj["address"]["details"][0]);  //4
+console.log(clone["address"]["details"][0]);  //5
+clone["name"] = "Deottam Prasad";
+console.log(clone["name"]); //Deottam Prasad
+console.log(obj["name"]); //Harry Potter
+clone["address"]["city"] = "Bokaro";
+console.log(clone["address"]["city"]); //Bokaro
+console.log(obj["address"]["city"]); //Surrey
+
+So, we can see that I have created a deep copy of the given object obj while changing the obj.address.details[0] = "5".Here I have used Object.assign() for modifying the original object so that we can change the address.details[0] = "5" and used structuredClone() for creating a deep copy for this new modified object.

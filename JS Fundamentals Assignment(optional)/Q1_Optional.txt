@@ -1,0 +1,29 @@
+let a = [10,[60,30],40];
+let b = [10,[60,30],40];
+let c = [10,60,30,40];
+
+let objA = {
+    name:"Harry Potter",
+  age: 12,
+  address: {
+  details: ["4", "Privet Drive"],
+  area:"Little Whinging",
+  city: "Surrey",
+  state: "England"
+  } 
+}
+let objB = {
+    name:"Harry Potter",
+  age: 12,
+  address: {
+  details: ["4", "Privet Drive"],
+  area:"Little Whinging",
+  city: "Surrey",
+  state: "England"
+  } 
+}
+let isEqual = (a,b) => JSON.stringify(a)===JSON.stringify(b)
+
+console.log(isEqual(a,b)); //true
+console.log(isEqual(objA,objB)); //true
+console.log(isEqual(a,c); //false
