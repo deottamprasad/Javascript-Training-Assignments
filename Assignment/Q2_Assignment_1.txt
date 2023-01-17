@@ -1,0 +1,22 @@
+let obj = {
+ a:"Apple",
+ b:["Basketball","Baseball"],
+ c: {
+  call: "cellphone"
+ },
+ d: "Dog"
+}
+
+function filterObject(obj) {
+ return Object.fromEntries(
+  Object.entries(obj).filter((item) => 
+   typeof(item[1])!='object')
+ );
+}
+
+console.log(filterObject(obj)); 
+//Output :
+//{a: 'Apple', d: 'Dog'}
+
+//As we can see, we only got the properties which have keys that have objects or arrays as their values.
+//Here I have converted the obj into an array which have elements in the form of pairs and i have filtered out those elements which have second element in the pair as //object.

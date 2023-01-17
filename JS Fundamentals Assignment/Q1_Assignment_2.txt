@@ -1,0 +1,27 @@
+let users = [{
+"id": 1,
+"first_name": "Nicki",
+"email": "ncrozier0@squarespace.com",
+"date_of_birth": "2009/05/09"
+}, {
+"id": 2,
+"first_name": "Raychel",
+"email": "rmcgrady1@cpanel.net",
+"date_of_birth": "1996/11/05"
+}];
+
+function mapBy(users,key) {
+ let x = users.map((item) => {
+  return ({[item[key]] : item});
+ });
+ return Object.assign({},...x);
+}
+
+console.log(mapBy(users, "first_name"));
+//Ouput :
+//{Nicki: {…}, Raychel: {…}}
+// Nicki: {id: 1, first_name: 'Nicki', email: 'ncrozier0@squarespace.com', date_of_birth: '2009/05/09'}
+// Raychel: {id: 2, first_name: 'Raychel', email: 'rmcgrady1@cpanel.net', date_of_birth: '1996/11/05'}
+// [[Prototype]]: Object
+ 
+//As we can see, mapBy() returned an object of objects. Here, first I converted each element of given array of objects into an object specified the given key and then used Object.assign() to convert the array of objects into a single object which contains objects itself specified by the key given. 

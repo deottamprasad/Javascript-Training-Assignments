@@ -1,0 +1,50 @@
+
+let objA = {
+    name:"Harry Potter",
+  age: 12,
+  address: {
+  details: ["4", "Privet Drive"],
+  area:"Little Whinging",
+  city: "Surrey",
+  state: "England"
+  } 
+}
+
+
+function deepCopy(objA) {
+    if(typeof(objA)!="object") 
+        return objA;
+    let objB = {};
+    for(let key of Object.keys(objA)) {
+        objB[key] = deepCopy(objA[key]);
+    }
+    return objB;
+}
+let clone = deepCopy(objA);
+clone.age = 13;
+clone.address.state = "Jharkhand";
+console.log(objA);
+/* Output :-
+{name: 'Harry Potter', age: 12, address: {…}}
+address: area: "Little Whinging"
+city: "Surrey"
+details: (2) ['4', 'Privet Drive']
+state: "England"
+[[Prototype]]: Object
+age: 12
+name: "Harry Potter"
+[[Prototype]]: Object
+*/
+
+console.log(clone);
+/* Output :-
+{name: 'Harry Potter', age: 13, address: {…}}
+address: area: "Little Whinging"
+city: "Surrey"
+details: {0: '4', 1: 'Privet Drive'}
+state: "Jharkhand"
+[[Prototype]]: Object
+age: 13
+name: "Harry Potter"
+[[Prototype]]: Object
+*/

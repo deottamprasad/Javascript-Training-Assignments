@@ -1,0 +1,14 @@
+let arr = ["Deottam", "Prasad", "Deottam"];
+
+function filterDuplicates(arr) {
+ let newArr = [];
+ arr.forEach((item) => {
+  if(newArr.includes(item)==false)
+   newArr.push(item);
+ })
+ return newArr;            
+}
+console.log(filterDuplicates(arr));
+//Output :-
+//['Deottam', 'Prasad']
+//So, we can see the duplicate strings are being filtered out.
